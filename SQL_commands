@@ -1,0 +1,48 @@
+CREATE TABLE IF NOT EXISTS genre(
+genre_id INT PRIMARY KEY ,
+name VARCHAR(40) NOT NULL
+);
+
+CREATE TABLE IF NOT EXISTS artists(
+artist_id INT PRIMARY KEY ,
+nickname VARCHAR(40) NOT NULL
+);
+
+CREATE TABLE IF NOT EXISTS albums(
+album_id INT PRIMARY KEY ,
+name VARCHAR(40) NOT NULL,
+year_ INT NOT NULL
+);
+
+CREATE TABLE IF NOT EXISTS track(
+track_id INT PRIMARY KEY ,
+name VARCHAR(40) NOT NULL,
+length INT NOT NULL,
+album_id INT REFERENCES albums(album_id)
+);
+
+
+CREATE TABLE IF NOT EXISTS archive(
+archive_id INT PRIMARY KEY ,
+name VARCHAR(40) NOT NULL,
+year_ INT NOT NULL
+);
+
+
+CREATE TABLE IF NOT EXISTS artists_genre(
+artist_id INTEGER REFERENCES artists(artist_id),
+genre_id INTEGER REFERENCES genre(genre_id),
+CONSTRAINT pk PRIMARY KEY (artist_id, genre_id)
+);
+
+CREATE TABLE IF NOT EXISTS albums_artists(
+artist_id INTEGER REFERENCES artists(artist_id),
+album_id INTEGER REFERENCES albums(album_id),
+CONSTRAINT pk2 PRIMARY KEY (artist_id, album_id)
+);
+
+CREATE TABLE IF NOT EXISTS archive_tracks(
+archive_id INTEGER REFERENCES archive(archive_id),
+track_id INTEGER REFERENCES track(track_id),
+CONSTRAINT pk3 PRIMARY KEY (archive_id, track_id)
+);
