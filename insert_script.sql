@@ -12,7 +12,7 @@ INSERT INTO genre (genre_id, name) VALUES (4, 'shanson');
 INSERT INTO albums(album_id, name, year_) VALUES (1,'Queen1', 1997);
 INSERT INTO albums(album_id, name, year_) VALUES (2,'Queen2', 1987);
 INSERT INTO albums(album_id, name, year_) VALUES (3, 'BTS1', 2016);
-INSERT INTO albums(album_id, name, year_) VALUES (4,'BTS2', 2019);
+INSERT INTO albums(album_id, name, year_) VALUES (4,'BTS2', 2020);
 INSERT INTO albums(album_id, name, year_) VALUES (5,'Scorpions1', 1988);
 INSERT INTO albums(album_id, name, year_) VALUES (6,'Scorpions2', 1981);
 
@@ -49,3 +49,5 @@ INSERT INTO archive_tracks(archive_id,track_id) VALUES (2,3); /*Still loving you
 INSERT INTO archive_tracks(archive_id,track_id) VALUES (4,4); /*korean_song1 -  cringe*/
 INSERT INTO archive_tracks(archive_id,track_id) VALUES (4,5); /*korean_song2 -  cringe*/
 INSERT INTO archive_tracks(archive_id,track_id) VALUES (2,6); /*shape of my heart - romantic*/
+INSERT INTO archive_tracks(archive_id,track_id) VALUES (5,2); /* Humanity - Scorpions_2023*/
+INSERT INTO archive_tracks(archive_id,track_id) VALUES (5,3); /* Still loving you - Scorpions_2023 */
